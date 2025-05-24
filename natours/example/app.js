@@ -83,6 +83,37 @@ const deleteTour = (req, res) => {
 app.route('/api/v1/tours').get(getAllTours).post(createTour)
 app.route('/api/v1/tours/:id').get(getSingleTour).patch(updateTour).delete(deleteTour)
 
+
+const getAllUsers = (req, res) => {
+    res.status(200).json({
+        status: "success",
+    })
+}
+
+const createUser = (req, res) => {
+    res.status(201).json({
+        status: "success",
+    })
+}
+
+const getSingleUser = (req, res) => {
+    res.status(200).json({
+        status: "success",
+    })
+}
+
+const updateUser = (req, res) => {
+    res.status(200).json({
+        status: "success",
+    })
+}
+
+const deleteUser = (req, res) => {
+    res.status(204).json({
+        status: "success",
+    })
+}
+
 app.route('/api/v1/users').get(getAllUsers).post(createUser)
 app.route('/api/v1/users/:id').get(getSingleUser).patch(updateUser).delete(deleteUser)
 
