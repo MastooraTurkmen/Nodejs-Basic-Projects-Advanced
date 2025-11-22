@@ -1,0 +1,26 @@
+{
+  "name": "database_with_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@datastax/astra-db-ts": "^2.1.2",
+    "bignumber.js": "^9.3.1",
+    "decoders": "^2.7.5",
+    "express": "^5.1.0",
+    "fast-check": "^4.3.0",
+    "json-bigint": "^1.0.0",
+    "nodemon": "^3.1.11",
+    "pure-rand": "^7.0.1",
+    "safe-stable-stringify": "^2.5.0",
+    "tslib": "^2.8.1",
+    "uuid": "^11.1.0"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
