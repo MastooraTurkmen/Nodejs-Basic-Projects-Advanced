@@ -1,6 +1,8 @@
-import React from 'react'
+import { useState } from 'react'
+import Model from './Model'
 
-const ListHeader = ({listName, children}) => {
+const ListHeader = ({listName}) => {
+  const[showModel, setShowModel]= useState(false)
 
   const signOut=()=>{
     console.log("Signing out...")
@@ -10,12 +12,10 @@ const ListHeader = ({listName, children}) => {
     <div className='list-header'>
       <h1>{listName}</h1>
       <div className="button-container">
-        <button className="create">Add new</button>
+        <button className="create" onClick={()=> setShowModel(true)}>Add new</button>
         <button className="signout" onClick={signOut}>Sign out</button>
       </div>
-      <ul className="list">
-        {children}
-      </ul>
+     {showModel && <Model mode={'create'} setShowModel={setShowModel}/>}
     </div>
   )
 }
