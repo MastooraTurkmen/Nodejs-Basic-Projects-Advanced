@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Model from './Model'
 
-const ListHeader = ({listName}) => {
+const ListHeader = ({listName, getData, task}) => {
   const[showModel, setShowModel]= useState(false)
 
   const signOut=()=>{
@@ -15,7 +15,7 @@ const ListHeader = ({listName}) => {
         <button className="create" onClick={()=> setShowModel(true)}>Add new</button>
         <button className="signout" onClick={signOut}>Sign out</button>
       </div>
-     {showModel && <Model mode={'create'} setShowModel={setShowModel}/>}
+     {showModel && <Model mode={'create'} setShowModel={setShowModel} getData={getData} task={task}/>}
     </div>
   )
 }
